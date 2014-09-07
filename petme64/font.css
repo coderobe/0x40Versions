@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Pet-Me-64';
+    src: url('Pet-Me-64.ttf.woff') format('woff'),
+    url('Pet-Me-64.ttf.svg#Pet-Me-64') format('svg'),
+    url('Pet-Me-64.ttf.eot'),
+    url('Pet-Me-64.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
