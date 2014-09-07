@@ -43,7 +43,6 @@ function parse(json){
                 "<div class='meta'>"+
                     "<span class='size'>%size%</span>"+
                     "<span class='author'>%author%</span>"+
-                    "<span class='count'>%count%</span>"+
                 "</div>"+
             "</a>"+
         "</li>";
