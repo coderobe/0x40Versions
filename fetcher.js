@@ -58,7 +58,6 @@ function parse(json){
             .replace("%name%", item.name)
             .replace("%size%", (item.size/(1024*1024)).toFixed(1)+"MB")
             .replace("%author%", item.author)
-            .replace("%count%", ("I:"+item.imagecount+" - S:"+item.songcount))
             .replace("%url%", item.url)
         document.getElementById("files").innerHTML += html;
     }
