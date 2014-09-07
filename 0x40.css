@@ -1,6 +1,6 @@
 @import url("petme64/font.css");
 
-#respacks *{
+#files *{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
@@ -85,7 +85,7 @@ html, body{
     padding: 0 5px;
 }
 
-#respacks{
+#files{
     display: block;
     width: 100%;
     padding: 0;
@@ -93,13 +93,13 @@ html, body{
     margin-top: 150px;
 }
 
-#respacks > span{
+#files > span{
     font-family: "Pet-Me-64";
     font-size: 20px;
     line-height: 40px;
 }
 
-#respacks .item{
+#files .item{
     display: block;
     padding: 0 10px;
     border-bottom: 1px black solid;
@@ -111,31 +111,31 @@ html, body{
     overflow: hidden;
 }
 
-#respacks .item a{
+#files .item a{
     display: block;
     height: 100%;
     width: 100%;
 }
 
-#respacks .item:hover{
+#files .item:hover{
     background-color: rgba(0,0,0,0.1);
 }
 
-#respacks .item:active{
+#files .item:active{
     background-color: rgba(0,0,0,0.2);
 }
 
-#respacks .item .meta{
+#files .item .meta{
     margin-top: -50px;
     text-align: right;
     font-size: 10px;
 }
 
-#respacks .item .meta > *:after{
+#files .item .meta > *:after{
     content: " | ";
 }
 
-#respacks .item .meta > *:last-child:after{
+#files .item .meta > *:last-child:after{
     content: none;
 }
 
@@ -161,14 +161,14 @@ html, body{
 }
 
 @media screen and (max-width: 800px){
-    #respacks .item .meta > *:after{
+    #files .item .meta > *:after{
         content: none;
     }
     #head{
         position: absolute;
         height: 300px;
     }
-    #respacks{
+    #files{
         margin-top: 300px;
     }
     #head .bg{
@@ -198,13 +198,13 @@ html, body{
     #head .right .container .header .subtitle{
         font-size: 30px;
     }
-    #respacks .item{
+    #files .item{
         font-size: 10px;
     }
-    #respacks .item .meta{
+    #files .item .meta{
         font-size: 8px;
     }
-    #respacks .item .meta span:not(.size){
+    #files .item .meta span:not(.size){
         display: none;
     }
 }

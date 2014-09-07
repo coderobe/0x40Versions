@@ -60,7 +60,7 @@ function parse(json){
             .replace("%author%", item.author)
             .replace("%count%", ("I:"+item.imagecount+" - S:"+item.songcount))
             .replace("%url%", item.url)
-        document.getElementById("respacks").innerHTML += html;
+        document.getElementById("files").innerHTML += html;
     }
 
     prepare();
@@ -69,8 +69,8 @@ function parse(json){
 function prepare(){
     var options = {
         valueNames: ['name'],
-        searchClass: 'respack-filter'
+        searchClass: 'file-filter'
     };
 
-    var respackList = new List('body', options);
+    var fileList = new List('body', options);
 }
