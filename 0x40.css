@@ -139,6 +139,10 @@ html, body{
     content: none;
 }
 
+#foot{
+    text-align: right;
+}
+
 #mobile{
     display: none;
     position: fixed;

@@ -12,8 +12,7 @@ function fetch(){
                     console.log(e);
                     return;
                 }
-            }
-            else{
+            }else{
                 document.getElementById("progress").innerText = "failed!";
             }
         }
@@ -28,22 +27,25 @@ function fetch(){
         }, false);
     }
     
-    xhr.open("GET", "list.json", true);
+    xhr.open("GET", "getfiles.php", true);
     xhr.send();
 }
 
 function parse(json){
     json = JSON.parse(json);
+
+    json.splice(0, 2);
+
     document.getElementById("status").style.display = "none";
 
     var template =
         "<li class='item'>"+
             "<a target='_blank' href='%url%'>"+
                 "<div class='name'>%name%</div>"+
-                "<div class='meta'>"+
-                    "<span class='size'>%size%</span>"+
-                    "<span class='author'>%author%</span>"+
-                "</div>"+
+                //"<div class='meta'>"+
+                //    "<span class='size'>%size%</span>"+
+                //    "<span class='author'>%author%</span>"+
+                //"</div>"+
             "</a>"+
         "</li>";
 
@@ -54,10 +56,10 @@ function parse(json){
         item = json[i];
 
         html = html
-            .replace("%name%", item.name)
-            .replace("%size%", (item.size/(1024*1024)).toFixed(1)+"MB")
-            .replace("%author%", item.author)
-            .replace("%url%", item.url)
+            .replace("%name%", item.replace("files/", "").replace(".swf", ""))
+            //.replace("%size%", (item.size/(1024*1024)).toFixed(1)+"MB")
+            //.replace("%author%", item.author)
+            .replace("%url%", item)
         document.getElementById("files").innerHTML += html;
     }
 
